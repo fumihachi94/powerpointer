@@ -3,7 +3,7 @@ subaru image recognition competition 2021 - powerpointer workspace
 
 Competition Site: https://signate.jp/competitions/563
 
-## folder structure
+# folder structure
 
 |dir|remarks|
 |--|--|
@@ -11,3 +11,49 @@ Competition Site: https://signate.jp/competitions/563
 |sandbox|いろいろお試し用|
 |stc|動確済みプログラム格納用|
 |test|テスト環境用|
+
+# Outline
+
+### 概要
+
+おもしろさ刺激を求めてSubaru Competitionに参加。
+Comp.Info.はComp.サイト参照すること。
+チーム名は、PowerPointer
+
+**スケジュール**
+
+- Comp.スケジュール
+	2021/11/19 コンペティション開始
+	2021/12/31 チーム作成締め切り
+	2022/01/31 コンペティション終了
+	2022/02/07 入賞選考のためのソースコードなど提出締め切り
+	2022/02/中旬 入賞者決定
+	2022/02/下旬 表彰式参加
+
+- Teamスケジュール
+
+**課題**
+
+2つのステレオカメラ画像で物体認識および物体に対する距離測定が可能であり、AIによる物体距離や速度推定技術も発展している。
+フレーム単位で先行車の速度を求めるアルゴリズムを作成する。
+
+**実装方法**
+
+- 前処理、学習、予測、の3つに分ける
+- それぞれを実行すれば処理が進むように実装する
+
+①preprocess(前処理)
+　提供データを読み込む
+　データに前処理を実施
+　モデルに入力が可能な状態でファイル出力する
+　※get_train_dataやget_test_dataのように学習用と評価用を分けて前処理する関数を定義
+
+②train(学習)
+　①で作成したファイルを読み込む
+　モデルを学習する
+　学習済みモデルや特徴量、クロスバリデーションの評価結果を出力する関数を定義
+
+③predict(予測)
+　①で作成したテストデータ読み込む
+　②で作成したモデルを読み込む
+　予測結果をファイルとして出力する
