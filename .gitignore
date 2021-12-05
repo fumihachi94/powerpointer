@@ -131,3 +131,4 @@ dmypy.json
 # remove dataset
 /data/*
 !/data/readme.md
+!/data/画像説明補足資料.pdf
